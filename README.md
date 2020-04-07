@@ -50,7 +50,7 @@ En esta tabla mostramos la tabla de verdad del número decimal al BCD y al 7 seg
 Se presenta en el simulador Quartus prime 
 ![simulacion](https://github.com/ELINGAP-7545/lab04-grupo-8/blob/master/simulacion%204%207%20segmentos/simulacion%204%20%207segmentos.jpg)
 
-##Código Verilog para 4x7segmentos
+## Código Verilog para 4x7segmentos
 
 ```verilog
 `timescale 1ns / 1ps //se utiliza para especificar unidad de tiempo en la simulación.  
@@ -108,7 +108,7 @@ endmodule
 
 ```
 
-##Testbench
+## Testbench
 
 
 ```verilog
