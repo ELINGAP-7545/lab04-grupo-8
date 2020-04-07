@@ -44,7 +44,7 @@ En este sentido, se adiciona al HDL de siete segmentos 4 señales de control par
 
 ## descripcion funcional: 
 es esta tabla mostramos la tabla de verdad del numero decimal al BCD y al 7 segmentos
-!tabla de verdad](https://github.com/ELINGAP-7545/lab04-grupo-8/blob/master/TABLA/TABLA%201.jpg)
+![tabla de verdad](https://github.com/ELINGAP-7545/lab04-grupo-8/blob/master/TABLA/TABLA%201.jpg)
 
 ## simulacion quartus prime 
 se presenta en el simulador quartus prime 
