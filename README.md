@@ -1,93 +1,60 @@
 # lab04
 BCD2SSeg
 
-# Introducción
+## ESTUDIANTES
 
-En este paquete de trabajo los estudiantes deben familiarizarce con el  framework de trabajo de la FPGA seleccionado, a partir de la descripción dedecodificador BCD2SSeg
-
-Para este paquete de trabajo, deben estar inscrito en un grupo y clonar la información del siguiente link [WP04](https://classroom.github.com/g/zCBwHHKX). Una vez aceptado el repositorio debe descargarlo en su computador, para ello debe clonar el mismo. Si no sabe cómo hacerlo revise la metodología de trabajo, donde se explica el proceso
-
-Las documentación deben estar diligencia en el archivo README.md del repositorio clonado.
-
-Una vez clone el repositorio, realice lo siguiente:
-
-## Diseño BCD-7seg
-
-En este punto, ya se estar en la capacidad de describir e implementar Hardware sencillo, con la ayuda de herramientas computaciones.  y como se vio en los dos ejemplos anteriores, la suma se visualiza en leds,  algo que es difícil para  validad visualmente la respuesta. Por lo tanto, es aconsejable tener una visualización mas acorde a las necesidades, como por ejemplo  visualizar los resultados en el [ Display 7 Segmentos](https://en.wikipedia.org/wiki/Seven-segment_display) 
-
-En este Ejercicio se propone que realicen el diseño, sintentización e implementación del Display de 7 sergmentos, el cual permita visualizar números  en representación hexadecimal (0x0 a 0xF).  En el siguiente gráfico, se observa cual es el funcionamiento deseado del display:
+luis Eduardo Cardenas Ortiz
+cod: 41458 CC:1077087937
 
 
-![gif display](https://upload.wikimedia.org/wikipedia/commons/2/2b/Seven_segment_display-animated.gif)
-
-Imagen tomada de [User:Guam + Various](https://commons.wikimedia.org/wiki/File:Seven_segment_display-animated.gif)
-
-A continuación se presentan los pasos recomendados para el ejercicio:
-
-**Definir la caja funcional del BCD**: 
-
-![bcd_black](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab03-BCD2SSeg/doc/BCD2SSeg.jpg)
-
-Si observa la caja negra/ funcional  ademas  de la salidad de 7 segmentos contiene  una salida `An`. esta salida es para conectar eventualmente el ánodo del display y  poder hacer visualización dinámica, cuando se tiene mas de un display conectado.
+Mateo luzardo jimenez
+cod: 61063  CC: 1026296907
 
 
-**Definir la descripción Funcional**
+### Implementar la vista dinamica en un display de 7 segmentos en forma decimal de 16 bits
 
-Para ello recuerde  que puede hacer uso, bien sea, de las tablas de verdad o de la descripción algorítmica del BCD a  siete segmentos. Recuerde que cada Segmento es una salida  del diseño. Ejemplo, si desea  visualizar el número **1**, la salida seria  de `Sseg es 0110000`. observe la gráfica a continuación, para generar las salidas acorde al número de entrada.
+Descripcion:
+El tipo de valor UInt16 representa enteros sin signo con valores comprendidos entre 0 y 65535.
+La estructura UInt16 proporciona métodos para comparar instancias de este tipo, convertir el valor de una instancia en su representación de cadena y convertir la representación de cadena de un número en una instancia de este tipo.
 
-![sseg](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/7_segment_display_labeled.svg/1024px-7_segment_display_labeled.svg.png)
+![display 7 segmentos](https://github.com/ELINGAP-7545/lab04-grupo-8/blob/master/display/300px-7_segment_display_labeled.svg.png)
 
+## anodo comun:
+La mejor definición de ánodo es el electrodo que pierde electrones en una reacción de oxidación. Normalmente se vincula al polo positivo del tránsito de la corriente eléctrica, pero no siempre es así. Normalmente se define el sentido de la corriente eléctrica, apreciándolo como un sentido de las cargas libres, pero si el conductor no es metálico, las cargas positivas que se producen se trasladan al conductor externo.
 
-* Definir en  HDL el comportamiento del sistema ** :  Use Verilog para hacer la descripción funcional
-**simulación de Sistema** :  Use el Testbench para este fin.
+## catodo comun:
+El cátodo es el electrodo con carga negativa, que en la reacción química sufre una reacción de reducción, donde su estado de oxidación se reduce cuando recibe electrones, Dentro de las celdas electrolíticas, el medio de traspaso de la energía, al no ser en un metal sino en un electrolito, pueden coexistir iones negativos y positivos que se mueven en sentidos opuestos. Pero por convenio, se dice que la corriente va desde el ánodo hacia el cátodo.
 
-
-# Ejercicio - Visualización Dinámica 4 Display
-
-
-Si el diseño digital de algún sistema se requiere mas de un display de 7 segmentos, es necesario  generar una visualización tal que sea necesario el menor número de pines para conectar todos los display en con la FPGA.
-
-Por ahora, se ha visualizado el números en un solo display de 7 segmentos. Pero en la mayoría de los casos, los 7 pines de los cátodos están inter-conectados entre cada display, como se observa en la figura:
-
-![conex](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab04_display_7segx4/doc/conex.png)
-
-Por lo tanto, se debe  realizar una multiplexación  entre los Anodos de cada Display, con el fin de visualizar en cada display un número diferente.  En otras palabras, en cada instante de tiempo, solo un display se encuentra activo. En este sentido, se debe garantizar que el destello en la visualización entre cada display no se perciba. Para ello, cada display debe activarse máximo cada 16 ms.
-
-Visualmente esto se entiende mas con la siguiente simulación, donde se desea visualizar el  número en representación hexadecimal `0x4321`:
+![tabla de verdad](https://github.com/ELINGAP-7545/lab04-grupo-8/blob/master/simulacion%204%207%20segmentos/catodo%20comun.jpg)
 
 
-![diagrama](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab04_display_7segx4/doc/4sseg.jpg)
 
 
-## Diagrama Caja negra 
+La visualización dinámica es en concepto la proyección de una porción de la información visual en diferentes pequeños intervalos de tiempo, en la mayoria de casos los 7 pines de los catodos estan inter-conectados entre cada display como se observa en la figura 
+![visualizacion dinamica 4 display](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab04_display_7segx4/doc/conex.png)
 
-Como siempre, antes de realizar la descripción del hardware se debe diseñar la caja funcional del modulo, con las entradas y salidas
+teniendo en cuenta lo anterior se debe realizar una multiplexacion para cada display ya que solo un display se encuentra activo
+![numeros en display](https://github.com/ELINGAP-7545/lab04-grupo-8/blob/master/numeros/numeros.gif)
 
-![diagrama caja negra ](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab04_display_7segx4/doc/display_7segx4.jpg)
+## caja negra
+El diseño de la caja negra para la implementacion del ejercicio planteado es el siguiente:
+![caja negra](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab04_display_7segx4/doc/display_7segx4.jpg)
 
-En este sentido, se adiciona al HDL de siete segmentos 4 señales de control para el LCD, llamadas An. cada bit de la señal `An` debe ser modificado en el tiempo, con el fin de activar solo un display.  
+En este sentido, se adiciona al HDL de siete segmentos 4 señales de control para el LCD, llamadas An. cada bit de la señal An debe ser modificado en el tiempo, con el fin de activar solo un display.
 
-## Diagrama Estructural 
+## descripcion funcional: 
+es esta tabla mostramos la tabla de verdad del numero decimal al BCD y al 7 segmentos
+![tabla de verdad](https://github.com/ELINGAP-7545/lab04-grupo-8/blob/master/TABLA/TABLA%201.jpg)
 
-![estructural](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab04_display_7segx4/doc/display_7segx4_Diag_Estructural.jpg)
+## simulacion quartus prime 
+se presenta en el simulador quartus prime 
+![simulacion](https://github.com/ELINGAP-7545/lab04-grupo-8/blob/master/simulacion%204%207%20segmentos/simulacion%204%20%207segmentos.jpg)
 
-Se evidencia que se deben construir cuatro módulos  básicos, de los cuales uno de ellos esta descrito en el ejercicio anterior, [BCDtoSSeg.v](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab04_display_7segx4/src_ise_basys2/display_7segx4/BCDtoSSeg.v) . Los otros tres bloques son:
+# conclusiones 
+* para enteder el archivo debemos saber identificar los valores numericos que se nos estan presentando en el display, debemos tener en cuenta los numeros que nos aparecen en el display y si es necesario podemos y/o debemos cambiar la configuracion para que nos de el valor asignado que debe aparecer en el display
 
-* Divisor de frecuencia: Su función es dividir la frecuencia de  `clk` de entrada, en el tiempo requerido para cada camvio de ánodo
-* Selector de Ánodo: Sincronizado con la frecuencia  que genera el divisor, cambia en cada instante de tiempo el  ánodo, se puede ver como un registro de desplazamiento del bit 0 `1110 1101 1011 0111`
-* Selector de Datos: dependiendo del ánodo activado, activa los datos correspondientes.
+* en el proceso a la hora de simular el programa no nos daba la simulacion ya que el error que teniamos era que el testbench que estabamos utilizando no era el que debia ser por que no estabamos utilizando la direccion de la carpeta correspondiente 
 
-# Entregables
 
-Una vez clone el repositorio y lea la anterior guia, realice lo siguiente:
 
-En el paquete de trabajo [WP04](https://classroom.github.com/g/zCBwHHKX)   esta la descripción del hardware que se implementa para visualizar un número hexadecimal de 32 bits en un display  y en 4 display de 7 segmentos.
-
-* Comprenda cada línea del código HDL de los  archivos que se encuentra en la carpera src. Si cree necesario realice los respectivos comentarios en el mismo archivo y comente
-* Realice en quartus la simulación para el BCD-7seg, analice los resultados.
-* Cree el nuevo proyecto HDL para Visualización Dinámica 4 Display, tomando como base los archivos dados.
-* Creer el archivo testbench.v
-* Genera la simulación, Revise que el sistema funciona como usted lo esperaba. Realice lo comentarios necesarios en el archivo README.md.
-* Modificar o Añadir los bloques necesarios para que la visualización sea en representación Decimal y no Hexadecimal.
-* Realice la respectiva publicación del repositorio antes de la fecha dada con todo el código  fuente 
-
+ 
