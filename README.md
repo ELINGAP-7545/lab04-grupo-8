@@ -14,22 +14,22 @@ cod:        CC:
 
 Descripcion:
 
-![display 7 segmentos](C:\Users\Alexandra\Desktop\LUIS CARDENAS\UNIVERSIDAD\ARQUITECTURA DE PROCESADORES\display\imagenes\display)
+![display 7 segmentos](https://github.com/ELINGAP-7545/lab04-grupo-8/blob/master/display/300px-7_segment_display_labeled.svg.png)
 
 El tipo de valor UInt16 representa enteros sin signo con valores comprendidos entre 0 y 65535.
-La estructura UInt16 proporciona m閠odos para comparar instancias de este tipo, convertir el valor de una instancia en su representaci髇 de cadena y convertir la representaci髇 de cadena de un n鷐ero en una instancia de este tipo.
+La estructura UInt16 proporciona m茅todos para comparar instancias de este tipo, convertir el valor de una instancia en su representaci贸n de cadena y convertir la representaci贸n de cadena de un n煤mero en una instancia de este tipo.
 
-La visualizaci髇 din醡ica es en concepto la proyecci髇 de una porci髇 de la informaci髇 visual en diferentes peque駉s intervalos de tiempo, en la mayoria de casos los 7 pines de los catodos estan inter-conectados entre cada display como se observa en la figura 
+La visualizaci贸n din谩mica es en concepto la proyecci贸n de una porci贸n de la informaci贸n visual en diferentes peque帽os intervalos de tiempo, en la mayoria de casos los 7 pines de los catodos estan inter-conectados entre cada display como se observa en la figura 
 ![visualizacion dinamica 4 display](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab04_display_7segx4/doc/conex.png)
 
 teniendo en cuenta lo anterior se debe realizar una multiplexacion para cada display ya que solo un display se encuentra activo
 ![numeros en display](C:\Users\Alexandra\Desktop\LUIS CARDENAS\UNIVERSIDAD\ARQUITECTURA DE PROCESADORES\display\imagenes\numeros)
 
 # caja negra
-El dise駉 de la caja negra para la implementacion del ejercicio planteado es el siguiente:
+El dise帽o de la caja negra para la implementacion del ejercicio planteado es el siguiente:
 ![caja negra](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab04_display_7segx4/doc/display_7segx4.jpg)
 
-En este sentido, se adiciona al HDL de siete segmentos 4 se馻les de control para el LCD, llamadas An. cada bit de la se馻l An debe ser modificado en el tiempo, con el fin de activar solo un display.
+En este sentido, se adiciona al HDL de siete segmentos 4 se帽ales de control para el LCD, llamadas An. cada bit de la se帽al An debe ser modificado en el tiempo, con el fin de activar solo un display.
 
 
  
