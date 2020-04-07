@@ -1,7 +1,7 @@
 # lab04
 BCD2SSeg
 
-#ESTUDIANTES
+## ESTUDIANTES
 
 luis Eduardo Cardenas Ortiz
 cod: 41458 CC:1077087937
@@ -11,7 +11,7 @@ Mateo luzardo jimenez
 cod:61063  CC: 1026296907
 
 
-##Implementar la vista dinamica en un display de 7 segmentos en forma decimal de 16 bits
+### Implementar la vista dinamica en un display de 7 segmentos en forma decimal de 16 bits
 
 Descripcion:
 
@@ -26,7 +26,7 @@ La visualización dinámica es en concepto la proyección de una porción de la 
 teniendo en cuenta lo anterior se debe realizar una multiplexacion para cada display ya que solo un display se encuentra activo
 ![numeros en display](https://github.com/ELINGAP-7545/lab04-grupo-8/blob/master/numeros/numeros.gif)
 
-### caja negra
+#### caja negra
 El diseño de la caja negra para la implementacion del ejercicio planteado es el siguiente:
 ![caja negra](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab04_display_7segx4/doc/display_7segx4.jpg)
 
