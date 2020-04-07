@@ -42,6 +42,10 @@ El diseño de la caja negra para la implementacion del ejercicio planteado es el
 
 En este sentido, se adiciona al HDL de siete segmentos 4 señales de control para el LCD, llamadas An. cada bit de la señal An debe ser modificado en el tiempo, con el fin de activar solo un display.
 
+## descripcion funcional: 
+es esta tabla mostramos la tabla de verdad del numero decimal al BCD y al 7 segmentos
+!tabla de verdad](https://github.com/ELINGAP-7545/lab04-grupo-8/blob/master/TABLA/TABLA.jpg)
+
 ## simulacion quartus prime 
 se presenta en el simulador quartus prime 
 ![simulacion](https://github.com/ELINGAP-7545/lab04-grupo-8/blob/master/simulacion%204%207%20segmentos/simulacion%204%20%207segmentos.jpg)
